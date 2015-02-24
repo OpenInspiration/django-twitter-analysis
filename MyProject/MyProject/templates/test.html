@@ -1,0 +1,125 @@
+<style>
+* { font-family:"Open Sans"; }
+.big { 
+	font-size:30px;
+	}
+.vbig {
+	font-size:40px;
+	}
+header {
+	background-color:#008080;
+	width:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	}
+header > div > p { color:white; }
+.container {
+	width:1000px;
+	margin:0 auto;
+	}
+.centerfication {
+	text-align:center;
+	}
+body {
+	margin-top:150px;
+	}
+.border {
+	border:10px solid #0A2A12;
+	text-align:center;
+	}
+select { 
+	padding:10px;
+	border:none;
+	background-color:white;
+	font-size:20px;
+	}
+button { 
+	padding-left:30px;
+	padding-right:30px;
+	background-color:#008080;
+	font-size:20px;
+	border:none;
+	-webkit-transition:1s;
+	}
+button:hover { 
+	background-color:white;
+	box-shadow:inset 2px 2px 2px;
+	
+}
+</style>
+<!--<p class="big">Social Context Matrix</p>
+{% for a in scm %}
+	{{ a }}<br>
+{% endfor %}
+
+<p class="big">Social Matrix</p>
+{% for a in sc %}
+	{{ a }}<br>
+{% endfor %}
+<br> -->
+
+<header>
+	<div class="container">
+		<p class="vbig centerfication">Topic Correlation in Context Based Text Mining</p>
+	</div>
+</header>
+<div class="container border">
+
+<p class="big">User Opinion Similarity </p>
+<form action="/uos" method="get">
+	<select name="user1">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	
+	<select name="user2">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	<button> UOS</button>
+</form>
+
+<p class="big">Topic Opinion Similarity </p>
+<form action="/tos" method="get">
+	<select name="user1">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	
+	<select name="user2">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	<button >TOS</button>
+	
+</form>
+
+<p class="big">Location Based Tweets</p>
+<form action="/location" method="get">
+	<select name="l1">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	
+	<select name="l2">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	<button >Location</button>
+	
+</form>
+<!--
+<p class="big">Generate Chart</p>
+<form action="/chart" method="get">
+	<select name="user_1">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	
+	<select name="user_2">{% for username in users_name %}
+		<option>{{ username }}</option>
+	{% endfor %}</select>
+	<button >To View Chart</button>
+	
+</form>
+-->
+</div><br><br>
+<div class="container color">
+
+{{ scm }}
+
+</div> 

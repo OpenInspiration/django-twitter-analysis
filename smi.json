@@ -1,0 +1,20 @@
+{"maps":
+	[{
+		"id":"105115",
+		"iscategorical":"yes"
+		},
+	{
+		"id":"Prasanna",
+		"iscategorical":"no"
+	}],
+"masks":
+		{
+		"id":"Paeep"
+		},
+"om_points":"Siva",
+	
+"parameters":
+	{
+		"id":"venkat"
+	}
+}

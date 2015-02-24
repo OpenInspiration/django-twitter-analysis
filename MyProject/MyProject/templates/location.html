@@ -1,0 +1,62 @@
+<style>
+* { font-family:"Open Sans"; }
+.big { 
+	font-size:30px;
+	}
+.vbig {
+	font-size:40px;
+	}
+header {
+	background-color:#008080;
+	width:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	}
+header > div > p { color:white; }
+.container {
+	width:1000px;
+	margin:0 auto;
+	}
+.centerfication {
+	text-align:center;
+	}
+body {
+	margin-top:150px;
+	}
+</style>
+<!--<p class="big">Social Context Matrix</p>
+{% for a in scm %}
+	{{ a }}<br>
+{% endfor %}
+
+<p class="big">Social Matrix</p>
+{% for a in sc %}
+	{{ a }}<br>
+{% endfor %}
+<br> -->
+
+<header>
+	<div class="container">
+		<p class="vbig centerfication">Topic Correlation using Context Based Text Mining</p>
+	</div>
+</header>
+<body>
+<div class="container">
+Location basis Analysis<br><br>
+
+{% if user1 == user2 %} 
+
+<p class="" style="color:red">Oops, we can't calculate the Location for same people </p>
+{% else %}
+{{ user1 }} : {{ l1 }} <br><br><br>
+{{ user2 }} : {{ l2 }} <br><br><br>
+{{ lo }}
+
+{{ lomat }}
+
+{{ lores }}
+{% endif %}
+</div>
+</body>
+</html>

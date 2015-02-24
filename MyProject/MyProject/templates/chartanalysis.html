@@ -1,0 +1,64 @@
+<html>
+<style>
+* { font-family:"Open Sans"; }
+.big { 
+	font-size:30px;
+	}
+.vbig {
+	font-size:40px;
+	}
+header {
+	background-color:#008080;
+	width:100%;
+	top:0px;
+	left:0px;
+	position:absolute;
+	}
+header > div > p { color:white; }
+.container {
+	width:1000px;
+	margin:0 auto;
+	}
+.centerfication {
+	text-align:center;
+	}
+body {
+	margin-top:150px;
+	}
+</style>
+<!--<p class="big">Social Context Matrix</p>
+{% for a in scm %}
+	{{ a }}<br>
+{% endfor %}
+
+<p class="big">Social Matrix</p>
+{% for a in sc %}
+	{{ a }}<br>
+{% endfor %}
+<br> -->
+
+<header>
+	<div class="container">
+		<p class="vbig centerfication">Topic Correlation using Context Based Text Mining</p>
+	</div>
+</header>
+<body >
+<div class="container">
+Chart<br><br>
+
+{% if user_1 == user_2 %}
+	<p style="color:red">Please give different names...</p>
+{% else %}
+Topic Opinion Similarity {{ t1 }}
+<br><br>
+User Opinion Similarity  {{ s1 }}
+<br><br>
+Location Basis Similarity {{ l1 }}
+
+To View Chart Click <a href={{url}}>here</a>
+{% endif %}
+</div>
+</body>
+</html>
+
+

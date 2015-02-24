@@ -1,0 +1,60 @@
+<html>
+	<head><title>Opinion Prediction</title>
+	<style>
+	.opensans { font-family:"Open Sans"; }
+	
+	.vbig { font-size:40px; }
+	
+	body { width:1000px; margin: 10 auto; }
+	
+	.infocard { border:1px solid white; border-radius:4px; padding:20px; background-color:white; border:10px solid #2c3539;}
+	
+	.big { font-size:25px; }
+	.for-new-color { 
+		background-color:#2c3539;
+		height:350px;
+		position:absolute;
+		width:100%;
+		left:0px;
+		top:0px;
+		
+	}
+	.white { color:white; }
+	
+	.pull-left { float:left; }
+	.pull-right { float:right; }
+	div > .pull-left { margin-left:20%; }
+	div > .pull-right { margin-right:20%; }
+	.cards { margin:0 auto; }
+	.center { text-align:center; }
+	.clear { clear:both; }
+	.down { margin-top:550px; }
+	</style>
+	</head>
+	<body>
+	<div class="for-new-color">
+	<p class="opensans vbig center white">Twitter Analysis Prediction System</p><hr color=green>
+	<div class="cards">
+	<div class="pull-left">
+		<p class="opensans big center white">Topic Analysis</p>
+		<p class="infocard opensans"><span class="opensans big">Sample Input</span><span class="opensans vbig"><br>R = </span><br> {% for a in TopicR %}{{ a }}<br>{% endfor %}</p>
+	</div>
+
+	<div class="pull-right">
+		<p class="opensans big center white">Social Analysis</p>
+		<p class="infocard opensans"><span class="opensans big">Still</span><span class="opensans vbig"><br>In Progress</span><br><br><br><progress value=55 max=100 ></progress></p>
+	</div>	
+	</div>
+	</div>
+	
+	<div class="clear"></div>
+		<div class="down">
+		<p class="opensans center vbig">Sample Output for Topical Context</p>
+		<div class="infocard opensans center"><p class="big">User Opinion</p>{% for p in nP %} {{ p }}<br> {% endfor %}</div><br>
+				<div class="infocard opensans center"><p class="big">Homophily Relation</p>{% for p in nQ %} {{ p }}<br> {% endfor %}</div>
+		</div>
+	
+	
+	</body>
+</html>
+
